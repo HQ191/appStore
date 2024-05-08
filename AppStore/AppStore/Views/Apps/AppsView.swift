@@ -4,14 +4,13 @@ struct AppsView: View {
     @ObservedObject var viewModel: AppsViewModel
     
     var body: some View {
-        VStack(alignment: .leading, spacing: .quarck) {
-            Text(Strings.title)
-                .font(.largeTitle)
-                .fontWeight(.bold)
-            
+        List {
+            HeaderView()
+                .listRowStyle(.hidden)
             CategoryView(categories: viewModel.categories)
+                .listRowStyle(.hidden)
         }
-        .padding(.leading, .xxs)
+        .listStyle(.plain)
         .frame(
             maxWidth: .infinity,
             maxHeight: .infinity,

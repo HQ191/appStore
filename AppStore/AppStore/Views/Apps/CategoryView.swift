@@ -12,6 +12,7 @@ struct CategoryView: View {
             }
             .padding(.trailing, .xxxs)
         })
+        .padding(.leading, .xxs)
     }
 }
 
@@ -32,7 +33,7 @@ private extension CategoryView {
             .padding(.vertical, .quarck)
             .padding(.horizontal, .nano)
             .background(Color.white)
-            .cornerRadius(10)
+            .cornerRadius(.nano)
             .shadow(color: Color.gray.opacity(0.3), radius: .quarck)
         }
         .padding(.quarck)
