@@ -1,8 +1,5 @@
-//
-//  AppsViewModel.swift
-//  AppStore
-//
-//  Created by Hassan Qureshi on 08.05.2024.
-//
+import SwiftUI
 
-import Foundation
+class AppsViewModel: ObservableObject {
+    @Published var categories: [CategoryDto] = .default
+}

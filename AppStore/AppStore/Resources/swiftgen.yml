@@ -1,0 +1,12 @@
+strings:
+  inputs:
+    - Localizables
+  outputs:
+    - templateName: structured-swift5
+      output: SwiftGen/Strings.swift
+xcassets:
+  inputs:
+    - Assets
+  outputs:
+    - templateName: swift5
+      output: SwiftGen/Assets.swift
