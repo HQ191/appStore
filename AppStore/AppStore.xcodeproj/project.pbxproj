@@ -21,6 +21,10 @@
 		5C889B132BEC018300E4A586 /* CGFloat+Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C889B122BEC018300E4A586 /* CGFloat+Spacing.swift */; };
 		5C889B182BEC117E00E4A586 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C889B172BEC117E00E4A586 /* HeaderView.swift */; };
 		5C889B1A2BEC18C800E4A586 /* View+ListRowStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C889B192BEC18C800E4A586 /* View+ListRowStyle.swift */; };
+		5C889B1C2BEC2B5700E4A586 /* HeadLineDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C889B1B2BEC2B5700E4A586 /* HeadLineDto.swift */; };
+		5C889B1E2BEC2C3F00E4A586 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C889B1D2BEC2C3F00E4A586 /* AppState.swift */; };
+		5C889B202BEC2CCD00E4A586 /* HeadlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C889B1F2BEC2CCD00E4A586 /* HeadlineView.swift */; };
+		5C889B222BEC456900E4A586 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C889B212BEC456900E4A586 /* View+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +44,10 @@
 		5C889B122BEC018300E4A586 /* CGFloat+Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Spacing.swift"; sourceTree = "<group>"; };
 		5C889B172BEC117E00E4A586 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		5C889B192BEC18C800E4A586 /* View+ListRowStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+ListRowStyle.swift"; sourceTree = "<group>"; };
+		5C889B1B2BEC2B5700E4A586 /* HeadLineDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadLineDto.swift; sourceTree = "<group>"; };
+		5C889B1D2BEC2C3F00E4A586 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		5C889B1F2BEC2CCD00E4A586 /* HeadlineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlineView.swift; sourceTree = "<group>"; };
+		5C889B212BEC456900E4A586 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +164,8 @@
 			isa = PBXGroup;
 			children = (
 				5C889B092BEBFD9800E4A586 /* CategoryDto.swift */,
+				5C889B1B2BEC2B5700E4A586 /* HeadLineDto.swift */,
+				5C889B1D2BEC2C3F00E4A586 /* AppState.swift */,
 			);
 			path = Dto;
 			sourceTree = "<group>";
@@ -166,6 +176,7 @@
 				5C889AE02BEBEE7A00E4A586 /* AppsView.swift */,
 				5C889B0B2BEBFE4400E4A586 /* CategoryView.swift */,
 				5C889B172BEC117E00E4A586 /* HeaderView.swift */,
+				5C889B1F2BEC2CCD00E4A586 /* HeadlineView.swift */,
 			);
 			path = Apps;
 			sourceTree = "<group>";
@@ -175,6 +186,7 @@
 			children = (
 				5C889B122BEC018300E4A586 /* CGFloat+Spacing.swift */,
 				5C889B192BEC18C800E4A586 /* View+ListRowStyle.swift */,
+				5C889B212BEC456900E4A586 /* View+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -276,10 +288,14 @@
 				5C889AE12BEBEE7A00E4A586 /* AppsView.swift in Sources */,
 				5C889B0C2BEBFE4400E4A586 /* CategoryView.swift in Sources */,
 				5C889B0A2BEBFD9800E4A586 /* CategoryDto.swift in Sources */,
+				5C889B1E2BEC2C3F00E4A586 /* AppState.swift in Sources */,
 				5C889AEF2BEBEED300E4A586 /* AppsViewModel.swift in Sources */,
+				5C889B1C2BEC2B5700E4A586 /* HeadLineDto.swift in Sources */,
 				5C889B022BEBF4A500E4A586 /* Strings.swift in Sources */,
 				5C889B182BEC117E00E4A586 /* HeaderView.swift in Sources */,
+				5C889B202BEC2CCD00E4A586 /* HeadlineView.swift in Sources */,
 				5C889B132BEC018300E4A586 /* CGFloat+Spacing.swift in Sources */,
+				5C889B222BEC456900E4A586 /* View+Extensions.swift in Sources */,
 				5C889B032BEBF4A500E4A586 /* Assets.swift in Sources */,
 				5C889ADF2BEBEE7A00E4A586 /* AppStoreApp.swift in Sources */,
 				5C889B1A2BEC18C800E4A586 /* View+ListRowStyle.swift in Sources */,

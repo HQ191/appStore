@@ -12,7 +12,6 @@ struct HeaderView: View {
                 .frame(width: .sm, height: .sm)
                 .clipShape(Circle())
         }
-        .padding(.horizontal, .xxs)
         .padding(.vertical, .xxxs)
     }
     

@@ -12,7 +12,6 @@ struct CategoryView: View {
             }
             .padding(.trailing, .xxxs)
         })
-        .padding(.leading, .xxs)
     }
 }
 
