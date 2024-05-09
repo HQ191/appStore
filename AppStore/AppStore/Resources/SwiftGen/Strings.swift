@@ -10,8 +10,22 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum L10n {
-  /// Apps
-  internal static let title = L10n.tr("Apps", "title", fallback: "Apps")
+  internal enum Apps {
+    /// Apps
+    internal static let title = L10n.tr("Apps", "title", fallback: "Apps")
+  }
+  internal enum AppStateButton {
+    /// In-app Purchases
+    internal static let inappPurchase = L10n.tr("AppStateButton", "inapp_purchase", fallback: "In-app Purchases")
+    internal enum Button {
+      /// Get
+      internal static let `get` = L10n.tr("AppStateButton", "button.get", fallback: "Get")
+      /// Open
+      internal static let `open` = L10n.tr("AppStateButton", "button.open", fallback: "Open")
+      /// Update
+      internal static let update = L10n.tr("AppStateButton", "button.update", fallback: "Update")
+    }
+  }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name vertical_whitespace_opening_braces

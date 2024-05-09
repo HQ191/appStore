@@ -68,17 +68,7 @@ private extension HeadlineView {
                         .foregroundStyle(.secondary)
                 }
                 Spacer()
-                Button{
-                } label: {
-                    Text("Open")
-                        .font(.caption)
-                        .fontWeight(.bold)
-                        .foregroundColor(.white)
-                        .padding()
-                        .frame(width: 80, height: 30)
-                        .background(Color.black.opacity(0.5))
-                        .clipShape(RoundedRectangle(cornerRadius: 15))
-                }
+                AppStateButton(appState: headLine.appState, style: .opaque)
             }
             .padding(.xxxs)
         }

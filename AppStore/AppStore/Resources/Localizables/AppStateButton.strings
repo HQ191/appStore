@@ -1,0 +1,5 @@
+button.get = "Get";
+button.open = "Open";
+button.update = "Update";
+
+inapp_purchase = "In-app Purchases";

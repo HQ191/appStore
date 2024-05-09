@@ -21,7 +21,7 @@ extension [HeadLineDto] {
             headline: "Your headline here",
             type: "Your type here",
             image: UIImage(systemName: "pencil.and.ellipsis.rectangle")!,
-            appState: .notPurchased
+            appState: .purchased
         ),
         HeadLineDto(
             id: "2",

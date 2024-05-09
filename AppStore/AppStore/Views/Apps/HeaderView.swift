@@ -15,7 +15,7 @@ struct HeaderView: View {
         .padding(.vertical, .xxxs)
     }
     
-    private typealias Strings = L10n
+    private typealias Strings = L10n.Apps
 }
 
 #Preview {
