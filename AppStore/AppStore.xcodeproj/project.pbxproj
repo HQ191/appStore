@@ -10,6 +10,12 @@
 		5C553C812BEEA3B400790EE4 /* QuickLinksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C553C802BEEA3B400790EE4 /* QuickLinksView.swift */; };
 		5C553C842BEEA3D200790EE4 /* QuickLinksView.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5C553C822BEEA3D200790EE4 /* QuickLinksView.strings */; };
 		5C553C872BEEA49D00790EE4 /* QuickLinkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C553C862BEEA49D00790EE4 /* QuickLinkModel.swift */; };
+		5C553C892BEED1D900790EE4 /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C553C882BEED1D900790EE4 /* TabbarView.swift */; };
+		5C553C8C2BEED35200790EE4 /* TabbarView.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5C553C8A2BEED35200790EE4 /* TabbarView.strings */; };
+		5C553C8E2BEED3C800790EE4 /* GamesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C553C8D2BEED3C800790EE4 /* GamesView.swift */; };
+		5C553C902BEED3DA00790EE4 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C553C8F2BEED3DA00790EE4 /* TodayView.swift */; };
+		5C553C922BEED3E500790EE4 /* ArcadeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C553C912BEED3E500790EE4 /* ArcadeView.swift */; };
+		5C553C942BEED40D00790EE4 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C553C932BEED40D00790EE4 /* SearchView.swift */; };
 		5C889ADF2BEBEE7A00E4A586 /* AppStoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C889ADE2BEBEE7A00E4A586 /* AppStoreApp.swift */; };
 		5C889AE12BEBEE7A00E4A586 /* AppsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C889AE02BEBEE7A00E4A586 /* AppsView.swift */; };
 		5C889AE32BEBEE7B00E4A586 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C889AE22BEBEE7B00E4A586 /* Images.xcassets */; };
@@ -41,6 +47,12 @@
 		5C553C802BEEA3B400790EE4 /* QuickLinksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickLinksView.swift; sourceTree = "<group>"; };
 		5C553C832BEEA3D200790EE4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/QuickLinksView.strings; sourceTree = "<group>"; };
 		5C553C862BEEA49D00790EE4 /* QuickLinkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickLinkModel.swift; sourceTree = "<group>"; };
+		5C553C882BEED1D900790EE4 /* TabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
+		5C553C8B2BEED35200790EE4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/TabbarView.strings; sourceTree = "<group>"; };
+		5C553C8D2BEED3C800790EE4 /* GamesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesView.swift; sourceTree = "<group>"; };
+		5C553C8F2BEED3DA00790EE4 /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
+		5C553C912BEED3E500790EE4 /* ArcadeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcadeView.swift; sourceTree = "<group>"; };
+		5C553C932BEED40D00790EE4 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		5C889ADB2BEBEE7A00E4A586 /* AppStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C889ADE2BEBEE7A00E4A586 /* AppStoreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreApp.swift; sourceTree = "<group>"; };
 		5C889AE02BEBEE7A00E4A586 /* AppsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsView.swift; sourceTree = "<group>"; };
@@ -108,11 +120,11 @@
 		5C889ADD2BEBEE7A00E4A586 /* AppStore */ = {
 			isa = PBXGroup;
 			children = (
+				5C889ADE2BEBEE7A00E4A586 /* AppStoreApp.swift */,
 				5C889AF52BEBF0EE00E4A586 /* Data */,
 				5C889AF22BEBF01800E4A586 /* Logic */,
 				5C889AEC2BEBEEA900E4A586 /* Views */,
 				5C889AF02BEBEEFF00E4A586 /* Resources */,
-				5C889ADE2BEBEE7A00E4A586 /* AppStoreApp.swift */,
 				5C889AE42BEBEE7B00E4A586 /* Preview Content */,
 			);
 			path = AppStore;
@@ -131,6 +143,11 @@
 			children = (
 				5C889B112BEC016900E4A586 /* Extensions */,
 				5C889B0D2BEBFFEF00E4A586 /* Apps */,
+				5C553C882BEED1D900790EE4 /* TabbarView.swift */,
+				5C553C8D2BEED3C800790EE4 /* GamesView.swift */,
+				5C553C8F2BEED3DA00790EE4 /* TodayView.swift */,
+				5C553C912BEED3E500790EE4 /* ArcadeView.swift */,
+				5C553C932BEED40D00790EE4 /* SearchView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -169,6 +186,7 @@
 				5C889AF92BEBF2B500E4A586 /* Apps.strings */,
 				5CE28B932BED61A400A7E588 /* AppStateButton.strings */,
 				5C553C822BEEA3D200790EE4 /* QuickLinksView.strings */,
+				5C553C8A2BEED35200790EE4 /* TabbarView.strings */,
 			);
 			path = Localizables;
 			sourceTree = "<group>";
@@ -304,6 +322,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C553C8C2BEED35200790EE4 /* TabbarView.strings in Resources */,
 				5C889AFA2BEBF2B500E4A586 /* Apps.strings in Resources */,
 				5C889B062BEBFCED00E4A586 /* Colors.xcassets in Resources */,
 				5CE28B942BED61A400A7E588 /* AppStateButton.strings in Resources */,
@@ -349,6 +368,7 @@
 				5C553C812BEEA3B400790EE4 /* QuickLinksView.swift in Sources */,
 				5CE28B992BED7EEC00A7E588 /* GroupView.swift in Sources */,
 				5C553C872BEEA49D00790EE4 /* QuickLinkModel.swift in Sources */,
+				5C553C902BEED3DA00790EE4 /* TodayView.swift in Sources */,
 				5CE28B9D2BED7F3400A7E588 /* AppItemDto.swift in Sources */,
 				5C889B1C2BEC2B5700E4A586 /* HeadLineDto.swift in Sources */,
 				5CE28B922BED5FB000A7E588 /* AppStateButton.swift in Sources */,
@@ -359,10 +379,14 @@
 				5C889B222BEC456900E4A586 /* View+Extensions.swift in Sources */,
 				5C889B032BEBF4A500E4A586 /* Assets.swift in Sources */,
 				5C889ADF2BEBEE7A00E4A586 /* AppStoreApp.swift in Sources */,
+				5C553C942BEED40D00790EE4 /* SearchView.swift in Sources */,
+				5C553C8E2BEED3C800790EE4 /* GamesView.swift in Sources */,
+				5C553C922BEED3E500790EE4 /* ArcadeView.swift in Sources */,
 				5C889B1A2BEC18C800E4A586 /* View+ListRowStyle.swift in Sources */,
 				5CE28B972BED685600A7E588 /* AppStateButton+Style.swift in Sources */,
 				5CE28B9B2BED7F2300A7E588 /* AppGroupDto.swift in Sources */,
 				5CE28B9F2BED80BF00A7E588 /* AppItemView.swift in Sources */,
+				5C553C892BEED1D900790EE4 /* TabbarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +399,14 @@
 				5C553C832BEEA3D200790EE4 /* en */,
 			);
 			name = QuickLinksView.strings;
+			sourceTree = "<group>";
+		};
+		5C553C8A2BEED35200790EE4 /* TabbarView.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5C553C8B2BEED35200790EE4 /* en */,
+			);
+			name = TabbarView.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

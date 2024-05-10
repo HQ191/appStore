@@ -3,6 +3,7 @@ import SwiftUI
 struct AppItemView: View {
     let data: AppItemDto
     let isSeparatorVisible: Bool
+    let onTap: () -> Void
     
     var body: some View {
         HStack {
@@ -15,7 +16,9 @@ struct AppItemView: View {
             HStack {
                 buildTextView()
                 Spacer()
-                AppStateButton(appState: data.state, style: .solid)
+                AppStateButton(appState: data.state, style: .solid) {
+                    print("App state button tapped for \(data.name)")
+                }
             }
             .padding(.bottom, .nano)
             .frame(maxHeight: .infinity)
@@ -25,6 +28,11 @@ struct AppItemView: View {
                 padding: .zero
             )
         }
+        .gesture(
+            TapGesture().onEnded { _ in
+                onTap()
+            }
+        )
     }
     
     private func buildTextView() -> some View {

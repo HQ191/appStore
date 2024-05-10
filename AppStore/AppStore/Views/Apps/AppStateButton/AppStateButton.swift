@@ -2,16 +2,14 @@ import SwiftUI
 import Combine
 
 struct AppStateButton: View {
-    var tapPublisher: AnyPublisher<Void, Never> {
-        tapSubject.eraseToAnyPublisher()
-    }
     
     let appState: AppState
     let style: Style
+    let onTap: () -> Void
     
     var body: some View {
         Button{
-            tapSubject.send()
+            onTap()
         } label: {
             if let title = appState.title {
                 buildTextView(title)
@@ -22,7 +20,6 @@ struct AppStateButton: View {
         }
     }
     
-    private let tapSubject = PassthroughSubject<Void, Never>()
     private typealias Strings = L10n.AppStateButton
 }
 
@@ -31,7 +28,7 @@ private extension AppStateButton {
         ZStack(alignment: .bottom) {
             Text(text)
                 .font(.caption)
-                .fontWeight(.bold)
+                .fontWeight(.semibold)
                 .foregroundColor(style.tint)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(style.backgroundColor)

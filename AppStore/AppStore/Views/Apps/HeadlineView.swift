@@ -3,6 +3,7 @@ import SwiftUI
 struct HeadlineView: View {
     let headLine: HeadLineDto
     let width: CGFloat
+    let onTap: () -> Void
     
     var body: some View {
         VStack {
@@ -12,6 +13,11 @@ struct HeadlineView: View {
         .frame(
             maxWidth: .infinity,
             alignment: .leading
+        )
+        .gesture(
+            TapGesture().onEnded { _ in
+                onTap()
+            }
         )
     }
 }
@@ -68,7 +74,9 @@ private extension HeadlineView {
                         .foregroundStyle(.secondary)
                 }
                 Spacer()
-                AppStateButton(appState: headLine.app.state, style: .opaque)
+                AppStateButton(appState: headLine.app.state, style: .opaque) {
+                    print("App state button tapped for \(headLine.app.name)")
+                }
             }
             .padding(.xxxs)
         }

@@ -23,12 +23,12 @@ private extension GroupView {
                 .font(.title3)
                 .fontWeight(.bold)
             Spacer()
-            Button {
-            } label: {
-                Text(Strings.Button.seeAll)
-                    .font(.caption)
-                    .foregroundColor(.accentColor)
+            Button(Strings.Button.seeAll) {
+                print("See all tapped for group: \(data.title)")
             }
+            .buttonStyle(.plain)
+            .foregroundStyle(.tint)
+            .font(.caption)
         }
         .padding(.trailing, .xxs)
     }
@@ -51,7 +51,9 @@ private extension GroupView {
     func buildAppItem(_ app: AppItemDto, index: Int) -> some View {
         let isSeparatorVisible = index % 3 != 0 && index != data.apps.count
         
-        return AppItemView(data: app, isSeparatorVisible: isSeparatorVisible)
-            .frame(width: rowWidth)
+        return AppItemView(data: app, isSeparatorVisible: isSeparatorVisible) {
+            print("App tapped with title: \(app.name)")
+        }
+        .frame(width: rowWidth)
     }
 }

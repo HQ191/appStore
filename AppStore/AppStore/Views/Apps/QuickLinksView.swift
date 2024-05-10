@@ -27,11 +27,14 @@ struct QuickLinksView: View {
     }
     
     private func buildLinkItem(_ link: QuickLinkModel) -> some View {
-        Text(link.title)
-            .font(.headline)
-            .fontWeight(.light)
-            .foregroundStyle(.tint)
-            .padding(.vertical, .thin)
+        Button(link.title) {
+            print("Link tapped with title: \(link.title)")
+        }
+        .font(.headline)
+        .fontWeight(.light)
+        .foregroundStyle(.tint)
+        .buttonStyle(.plain)
+        .padding(.vertical, .thin)
     }
     
     private func buildButtonView() -> some View {
@@ -44,11 +47,18 @@ struct QuickLinksView: View {
     }
     
     private func buildButton(title: String) -> some View {
-        Button(title) {
+        Button {
+            print("Button tapped with title: \(title)")
+        } label: {
+            Text(title)
+                .font(.caption)
+                .foregroundStyle(.tint)
+                .fontWeight(.medium)
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, .thin)
         }
-        .buttonStyle(.bordered)
-        .font(.caption)
         .frame(maxWidth: .infinity)
+        .buttonStyle(.bordered)
     }
     
     private typealias Strings = L10n.QuickLinksView

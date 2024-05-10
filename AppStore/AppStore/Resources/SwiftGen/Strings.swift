@@ -42,6 +42,18 @@ internal enum L10n {
       internal static let sendGift = L10n.tr("QuickLinksView", "button.send_gift", fallback: "Send Gift")
     }
   }
+  internal enum TabbarView {
+    /// Apps
+    internal static let apps = L10n.tr("TabbarView", "Apps", fallback: "Apps")
+    /// Arcade
+    internal static let arcade = L10n.tr("TabbarView", "Arcade", fallback: "Arcade")
+    /// Games
+    internal static let games = L10n.tr("TabbarView", "games", fallback: "Games")
+    /// Search
+    internal static let search = L10n.tr("TabbarView", "Search", fallback: "Search")
+    /// Today
+    internal static let today = L10n.tr("TabbarView", "today", fallback: "Today")
+  }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name vertical_whitespace_opening_braces
