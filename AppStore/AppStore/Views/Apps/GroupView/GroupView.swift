@@ -43,6 +43,9 @@ private extension GroupView {
                         .frame(width: rowWidth)
                 }
             }
+            .padding(.trailing, .xxs)
+            .scrollTargetLayout()
         }
+        .scrollTargetBehavior(.viewAligned)
     }
 }

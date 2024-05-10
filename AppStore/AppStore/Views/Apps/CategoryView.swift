@@ -4,14 +4,16 @@ struct CategoryView: View {
     let categories: [CategoryDto]
 
     var body: some View {
-        ScrollView(.horizontal, showsIndicators: false, content: {
-            HStack(spacing: .quarck) {
+        ScrollView(.horizontal, showsIndicators: false) {
+            LazyHStack(spacing: .quarck) {
                 ForEach(categories) { category in
                     buildCategory(category)
                 }
             }
             .padding(.trailing, .xxxs)
-        })
+            .scrollTargetLayout()
+        }
+        .scrollTargetBehavior(.viewAligned)
     }
 }
 

@@ -31,7 +31,10 @@ struct AppsView: View {
                     HeadlineView(headLine: headline, width: width)
                 }
             }
+            .padding(.trailing, .xxs)
+            .scrollTargetLayout()
         }
+        .scrollTargetBehavior(.viewAligned)
         .padding(.vertical, .xxs)
     }
     
@@ -40,8 +43,6 @@ struct AppsView: View {
             GroupView(data: appGroup, rowWidth: width)
         }
     }
-    
-    private typealias Strings = L10n
 }
 
 #Preview {
