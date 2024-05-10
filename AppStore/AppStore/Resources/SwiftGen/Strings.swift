@@ -15,7 +15,7 @@ internal enum L10n {
     internal static let title = L10n.tr("Apps", "title", fallback: "Apps")
     internal enum Button {
       /// See all
-      internal static let seeAll = L10n.tr("Apps", "button.seeAll", fallback: "See all")
+      internal static let seeAll = L10n.tr("Apps", "button.see_all", fallback: "See all")
     }
   }
   internal enum AppStateButton {
@@ -28,6 +28,18 @@ internal enum L10n {
       internal static let `open` = L10n.tr("AppStateButton", "button.open", fallback: "Open")
       /// Update
       internal static let update = L10n.tr("AppStateButton", "button.update", fallback: "Update")
+    }
+  }
+  internal enum QuickLinksView {
+    /// Quick Links
+    internal static let title = L10n.tr("QuickLinksView", "title", fallback: "Quick Links")
+    internal enum Button {
+      /// Add Funds to Apple ID
+      internal static let addFunds = L10n.tr("QuickLinksView", "button.add_funds", fallback: "Add Funds to Apple ID")
+      /// Redeem
+      internal static let redeem = L10n.tr("QuickLinksView", "button.redeem", fallback: "Redeem")
+      /// Send Gift
+      internal static let sendGift = L10n.tr("QuickLinksView", "button.send_gift", fallback: "Send Gift")
     }
   }
 }

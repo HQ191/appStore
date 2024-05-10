@@ -1,0 +1,5 @@
+title = "Quick Links";
+
+button.redeem = "Redeem";
+button.send_gift = "Send Gift";
+button.add_funds = "Add Funds to Apple ID";

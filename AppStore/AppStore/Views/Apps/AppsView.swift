@@ -18,6 +18,10 @@ struct AppsView: View {
                 
                 buildAppGroupView(width: contentWidth)
                     .listRowHiddenStyle()
+                
+                QuickLinksView(links: viewModel.quickLinks)
+                    .listRowHiddenStyle()
+                    .padding(.trailing, .xxs)
             }
             .padding(.leading, .xxs)
             .listStyle(.plain)

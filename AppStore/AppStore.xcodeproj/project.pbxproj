@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C553C812BEEA3B400790EE4 /* QuickLinksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C553C802BEEA3B400790EE4 /* QuickLinksView.swift */; };
+		5C553C842BEEA3D200790EE4 /* QuickLinksView.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5C553C822BEEA3D200790EE4 /* QuickLinksView.strings */; };
+		5C553C872BEEA49D00790EE4 /* QuickLinkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C553C862BEEA49D00790EE4 /* QuickLinkModel.swift */; };
 		5C889ADF2BEBEE7A00E4A586 /* AppStoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C889ADE2BEBEE7A00E4A586 /* AppStoreApp.swift */; };
 		5C889AE12BEBEE7A00E4A586 /* AppsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C889AE02BEBEE7A00E4A586 /* AppsView.swift */; };
 		5C889AE32BEBEE7B00E4A586 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C889AE22BEBEE7B00E4A586 /* Images.xcassets */; };
@@ -35,6 +38,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5C553C802BEEA3B400790EE4 /* QuickLinksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickLinksView.swift; sourceTree = "<group>"; };
+		5C553C832BEEA3D200790EE4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/QuickLinksView.strings; sourceTree = "<group>"; };
+		5C553C862BEEA49D00790EE4 /* QuickLinkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickLinkModel.swift; sourceTree = "<group>"; };
 		5C889ADB2BEBEE7A00E4A586 /* AppStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C889ADE2BEBEE7A00E4A586 /* AppStoreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreApp.swift; sourceTree = "<group>"; };
 		5C889AE02BEBEE7A00E4A586 /* AppsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsView.swift; sourceTree = "<group>"; };
@@ -75,6 +81,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C553C852BEEA47E00790EE4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5C553C862BEEA49D00790EE4 /* QuickLinkModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		5C889AD22BEBEE7A00E4A586 = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +157,7 @@
 		5C889AF52BEBF0EE00E4A586 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				5C553C852BEEA47E00790EE4 /* Model */,
 				5C889B082BEBFD8A00E4A586 /* Dto */,
 			);
 			path = Data;
@@ -153,6 +168,7 @@
 			children = (
 				5C889AF92BEBF2B500E4A586 /* Apps.strings */,
 				5CE28B932BED61A400A7E588 /* AppStateButton.strings */,
+				5C553C822BEEA3D200790EE4 /* QuickLinksView.strings */,
 			);
 			path = Localizables;
 			sourceTree = "<group>";
@@ -196,6 +212,7 @@
 				5C889B0B2BEBFE4400E4A586 /* CategoryView.swift */,
 				5C889B172BEC117E00E4A586 /* HeaderView.swift */,
 				5C889B1F2BEC2CCD00E4A586 /* HeadlineView.swift */,
+				5C553C802BEEA3B400790EE4 /* QuickLinksView.swift */,
 			);
 			path = Apps;
 			sourceTree = "<group>";
@@ -290,6 +307,7 @@
 				5C889AFA2BEBF2B500E4A586 /* Apps.strings in Resources */,
 				5C889B062BEBFCED00E4A586 /* Colors.xcassets in Resources */,
 				5CE28B942BED61A400A7E588 /* AppStateButton.strings in Resources */,
+				5C553C842BEEA3D200790EE4 /* QuickLinksView.strings in Resources */,
 				5C889AE62BEBEE7B00E4A586 /* Preview Assets.xcassets in Resources */,
 				5C889AE32BEBEE7B00E4A586 /* Images.xcassets in Resources */,
 			);
@@ -328,7 +346,9 @@
 				5C889B0A2BEBFD9800E4A586 /* CategoryDto.swift in Sources */,
 				5C889B1E2BEC2C3F00E4A586 /* AppState.swift in Sources */,
 				5C889AEF2BEBEED300E4A586 /* AppsViewModel.swift in Sources */,
+				5C553C812BEEA3B400790EE4 /* QuickLinksView.swift in Sources */,
 				5CE28B992BED7EEC00A7E588 /* GroupView.swift in Sources */,
+				5C553C872BEEA49D00790EE4 /* QuickLinkModel.swift in Sources */,
 				5CE28B9D2BED7F3400A7E588 /* AppItemDto.swift in Sources */,
 				5C889B1C2BEC2B5700E4A586 /* HeadLineDto.swift in Sources */,
 				5CE28B922BED5FB000A7E588 /* AppStateButton.swift in Sources */,
@@ -347,6 +367,17 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5C553C822BEEA3D200790EE4 /* QuickLinksView.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5C553C832BEEA3D200790EE4 /* en */,
+			);
+			name = QuickLinksView.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		5C889AE72BEBEE7B00E4A586 /* Debug */ = {
