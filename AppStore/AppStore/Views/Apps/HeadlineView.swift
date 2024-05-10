@@ -17,12 +17,12 @@ struct HeadlineView: View {
 }
 
 private extension HeadlineView {
-    @ViewBuilder func buildTitleView() -> some View {
+    func buildTitleView() -> some View {
         VStack(alignment: .leading, spacing: 0) {
             Text(headLine.type)
                 .font(.caption)
                 .foregroundStyle(.tint)
-            Text(headLine.appName)
+            Text(headLine.app.name)
                 .font(.title2)
                 .lineLimit(1)
             Text(headLine.headline)
@@ -36,16 +36,16 @@ private extension HeadlineView {
         )
     }
     
-    @ViewBuilder func buildImageView() -> some View {
+    func buildImageView() -> some View {
         ZStack(alignment: .bottom) {
-            Image(uiImage: headLine.image)
+            headLine.image
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(
                     width: width,
-                    height: width * 0.7
+                    height: width * 0.6
                 )
-                .circularBorder()
+                .circularBorder(radius: .quarck)
             
             buildImageOverlay()
         }
@@ -54,21 +54,21 @@ private extension HeadlineView {
     func buildImageOverlay() -> some View {
         VStack {
             HStack {
-                Image(uiImage: headLine.appIcon)
+                headLine.app.icon
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: .md, height: .md)
                     .clipShape(RoundedRectangle(cornerRadius: .nano))
                     .circularBorder()
                 VStack(alignment: .leading) {
-                    Text(headLine.appName)
+                    Text(headLine.app.name)
                         .font(.caption)
-                    Text(headLine.appDescription)
+                    Text(headLine.app.description)
                         .font(.caption2)
                         .foregroundStyle(.secondary)
                 }
                 Spacer()
-                AppStateButton(appState: headLine.appState, style: .opaque)
+                AppStateButton(appState: headLine.app.state, style: .opaque)
             }
             .padding(.xxxs)
         }

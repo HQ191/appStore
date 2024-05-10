@@ -11,6 +11,10 @@ extension CGFloat {
     static let quarck: CGFloat = 4
     /// Value: 8
     static let nano: CGFloat = 8
+    /// Value: 10
+    static let micro: CGFloat = 10
+    /// Value: 14
+    static let mini: CGFloat = 14
     /// Value: 16
     static let xxxs: CGFloat = 16
     /// Value: 20

@@ -7,7 +7,7 @@ extension AppStateButton {
         
         var backgroundColor: Color {
             switch self {
-            case .solid: return .gray.opacity(0.7)
+            case .solid: return .gray.opacity(0.3)
             case .opaque: return .black.opacity(0.5)
             }
         }

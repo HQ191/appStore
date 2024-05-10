@@ -5,7 +5,7 @@ struct CategoryDto: Identifiable {
 }
 
 extension [CategoryDto] {
-    static let `default`: [CategoryDto] = [
+    static let mock: [CategoryDto] = [
         CategoryDto(id: 1, name: "Reference", image: "pencil.and.ellipsis.rectangle"),
         CategoryDto(id: 2, name: "Music", image: "tv.music.note.fill"),
         CategoryDto(id: 3, name: "Education", image: "book.fill"),

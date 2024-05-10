@@ -10,20 +10,14 @@ struct AppStateButton: View {
     let style: Style
     
     var body: some View {
-        ZStack(alignment: .bottom) {
-            Button{
-                tapSubject.send()
-            } label: {
-                if let title = appState.title {
-                    buildTextView(title)
-                }
-                if let icon = appState.icon {
-                    buildIconView(icon)
-                }
+        Button{
+            tapSubject.send()
+        } label: {
+            if let title = appState.title {
+                buildTextView(title)
             }
-            
-            if appState == .notPurchased {
-                buildSubTextView()
+            if let icon = appState.icon {
+                buildIconView(icon)
             }
         }
     }
@@ -34,30 +28,40 @@ struct AppStateButton: View {
 
 private extension AppStateButton {
     func buildTextView(_ text: String) -> some View {
-        Text(text)
-            .font(.caption)
-            .fontWeight(.bold)
-            .foregroundColor(style.tint)
-            .frame(width: .xxxl, height: .sm)
-            .background(style.backgroundColor)
-            .clipShape(RoundedRectangle(cornerRadius: .xxxs))
-            .padding(.vertical, .nano)
+        ZStack(alignment: .bottom) {
+            Text(text)
+                .font(.caption)
+                .fontWeight(.bold)
+                .foregroundColor(style.tint)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .background(style.backgroundColor)
+                .clipShape(RoundedRectangle(cornerRadius: .xxxs))
+                .frame(width: .xxl, height: .xs)
+                .padding(.bottom, .quarck)
+            
+            if appState == .notPurchased {
+                buildSubTextView()
+                    .padding(.bottom, -.nano)
+            }
+        }
     }
     
     func buildIconView(_ icon: UIImage) -> some View {
-        Image(uiImage: icon)
-            .resizable()
-            .renderingMode(.template)
-            .foregroundStyle(style.tint)
-            .aspectRatio(contentMode: .fit)
-            .frame(width: .xs, height: .xs)
+        HStack {
+            Image(uiImage: icon)
+                .resizable()
+                .renderingMode(.template)
+                .foregroundStyle(style.tint)
+                .aspectRatio(contentMode: .fit)
+                .frame(width: .xs, height: .xs)
+        }
+        .frame(width: .xxl, height: .xs)
     }
     
     func buildSubTextView() -> some View {
         Text(Strings.inappPurchase)
-            .font(.system(size: .nano))
+            .font(.system(size: .mini/2))
             .foregroundColor(.black.opacity(0.7))
-            .padding(.bottom, -.quarck)
     }
 }
 

@@ -13,10 +13,14 @@ internal enum L10n {
   internal enum Apps {
     /// Apps
     internal static let title = L10n.tr("Apps", "title", fallback: "Apps")
+    internal enum Button {
+      /// See all
+      internal static let seeAll = L10n.tr("Apps", "button.seeAll", fallback: "See all")
+    }
   }
   internal enum AppStateButton {
-    /// In-app Purchases
-    internal static let inappPurchase = L10n.tr("AppStateButton", "inapp_purchase", fallback: "In-app Purchases")
+    /// In-App Purchases
+    internal static let inappPurchase = L10n.tr("AppStateButton", "inapp_purchase", fallback: "In-App Purchases")
     internal enum Button {
       /// Get
       internal static let `get` = L10n.tr("AppStateButton", "button.get", fallback: "Get")

@@ -15,13 +15,16 @@ struct AppsView: View {
                 
                 buildHealineView(width: contentWidth)
                     .listRowHiddenStyle()
+                
+                buildAppGroupView(width: contentWidth)
+                    .listRowHiddenStyle()
             }
             .padding(.leading, .xxs)
             .listStyle(.plain)
         }
     }
     
-    @ViewBuilder func buildHealineView(width: CGFloat) -> some View {
+    func buildHealineView(width: CGFloat) -> some View {
         ScrollView(.horizontal, showsIndicators: false) {
             LazyHStack {
                 ForEach(viewModel.headlines) { headline in
@@ -30,6 +33,12 @@ struct AppsView: View {
             }
         }
         .padding(.vertical, .xxs)
+    }
+    
+    func buildAppGroupView(width: CGFloat) -> some View {
+        ForEach(viewModel.appGroups) { appGroup in
+            GroupView(data: appGroup, rowWidth: width)
+        }
     }
     
     private typealias Strings = L10n
