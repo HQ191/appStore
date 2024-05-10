@@ -7,9 +7,10 @@ struct GroupView: View {
     var body: some View {
         VStack(spacing: .quarck) {
             buildTitleView()
-            buildAppItemView()
+            buildAppListView()
         }
-        .padding(.vertical, .xxxs)
+        .padding(.top, .nano)
+        .padding(.bottom, .xxs)
     }
     
     private typealias Strings = L10n.Apps
@@ -23,7 +24,6 @@ private extension GroupView {
                 .fontWeight(.bold)
             Spacer()
             Button {
-                
             } label: {
                 Text(Strings.Button.seeAll)
                     .font(.caption)
@@ -33,19 +33,25 @@ private extension GroupView {
         .padding(.trailing, .xxs)
     }
     
-    func buildAppItemView() -> some View {
+    func buildAppListView() -> some View {
         let rows = Array(repeating: GridItem(.fixed(65)), count: 3)
         
         return ScrollView(.horizontal, showsIndicators: false) {
             LazyHGrid(rows: rows) {
-                ForEach(data.apps) { app in
-                    AppItemView(data: app)
-                        .frame(width: rowWidth)
+                ForEach(0..<data.apps.count, id: \.self) { index in
+                    buildAppItem(data.apps[index], index: index + 1)
                 }
             }
             .padding(.trailing, .xxs)
             .scrollTargetLayout()
         }
         .scrollTargetBehavior(.viewAligned)
+    }
+    
+    func buildAppItem(_ app: AppItemDto, index: Int) -> some View {
+        let isSeparatorVisible = index % 3 != 0 && index != data.apps.count
+        
+        return AppItemView(data: app, isSeparatorVisible: isSeparatorVisible)
+            .frame(width: rowWidth)
     }
 }

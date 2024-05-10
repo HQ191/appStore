@@ -17,7 +17,3 @@ struct HeaderView: View {
     
     private typealias Strings = L10n.Apps
 }
-
-#Preview {
-    HeaderView()
-}

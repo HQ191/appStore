@@ -1,16 +1,19 @@
 import SwiftUI
 
 extension View {
-    func bottomDivider(
-        color: Color = Color.gray,
-        thickness: CGFloat = 1
+    func divider(
+        alignment: Alignment = .bottom,
+        color: Color = .gray.opacity(0.3),
+        thickness: CGFloat = 1,
+        edges: Edge.Set = .horizontal,
+        padding: CGFloat? = nil
     ) -> some View {
         self.overlay(
-            Divider()
-                .background(color)
-                .frame(height: thickness)
-                .edgesIgnoringSafeArea(.horizontal)
-                .padding(.top, 8) // Adjust as needed
+            Rectangle()
+                .frame(width: nil, height: 1, alignment: alignment)
+                .foregroundColor(color)
+                .padding(edges, padding),
+            alignment: alignment
         )
     }
     

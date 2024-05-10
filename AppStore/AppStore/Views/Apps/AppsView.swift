@@ -39,9 +39,13 @@ struct AppsView: View {
     }
     
     func buildAppGroupView(width: CGFloat) -> some View {
-        ForEach(viewModel.appGroups) { appGroup in
-            GroupView(data: appGroup, rowWidth: width)
+        VStack(spacing: .zero) {
+            ForEach(viewModel.appGroups) { appGroup in
+                Divider().padding(.trailing, .xxs)
+                GroupView(data: appGroup, rowWidth: width)
+            }
         }
+        .padding(.top, .nano)
     }
 }
 
