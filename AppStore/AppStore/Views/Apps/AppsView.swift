@@ -69,7 +69,7 @@ private extension AppsView {
     
     @ViewBuilder func buildStreamView(data: Any, contentWidth: CGFloat) -> some View {
         if let headline = data as? HeadLineDto {
-            HeadlineView(headline: headline, rowWidth: contentWidth)
+            buildHeadlineView(headline: headline, rowWidth: contentWidth)
         }
         else if let appGroup = data as? AppGroupDto {
             buildAppGroupView(appGroup: appGroup, width: contentWidth)
@@ -79,11 +79,24 @@ private extension AppsView {
         }
     }
     
+    func buildHeadlineView(headline: HeadLineDto, rowWidth: CGFloat) -> some View {
+        HeadlineView(headline: headline, rowWidth: rowWidth) { headline in
+            print("Headline tapped: \(headline.headline)")
+        } onAppTap: { headline in
+            print("App tapped: \(headline.app.name)")
+        }
+        .padding(.vertical, .xxs)
+    }
+    
     func buildAppGroupView(appGroup: AppGroupDto, width: CGFloat) -> some View {
         VStack(spacing: .nano) {
             Divider().padding(.trailing, .xxs)
-            GroupView(data: appGroup, rowWidth: width)
-                .padding(.bottom, .xxs)
+            GroupView(data: appGroup, rowWidth: width) {
+                print("See all tapped for \(appGroup.title)")
+            } onAppTap: { app in
+                print("App tapped: \(app.name)")
+            }
+            .padding(.bottom, .xxs)
         }
         .padding(.top, .nano)
     }
@@ -91,8 +104,10 @@ private extension AppsView {
     func buildBannerView(banner: BannerDto, width: CGFloat) -> some View {
         VStack(spacing: .nano) {
             Divider().padding(.trailing, .xxs)
-            BannerView(data: banner, width: width)
-                .padding(.bottom, .xxxs)
+            BannerView(data: banner, width: width) { banner in
+                print("Banner tapped: \(banner.title)")
+            }
+            .padding(.bottom, .xxxs)
         }
         .padding(.top, .nano)
     }

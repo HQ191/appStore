@@ -4,6 +4,7 @@ struct HeadlineItemView: View {
     let headLine: HeadLineItemDto
     let width: CGFloat
     let onTap: () -> Void
+    let onAppTap: () -> Void
     
     var body: some View {
         VStack {
@@ -77,7 +78,7 @@ private extension HeadlineItemView {
                 }
                 Spacer()
                 AppStateButton(appState: headLine.app.state, style: .opaque) {
-                    print("App state button tapped for \(headLine.app.name)")
+                    onAppTap()
                 }
             }
             .padding(.xxxs)

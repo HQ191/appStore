@@ -3,6 +3,8 @@ import SwiftUI
 struct GroupView: View {
     let data: AppGroupDto
     let rowWidth: CGFloat
+    let onSeeAllTap: () -> Void
+    let onAppTap: (AppItemDto) -> Void
     
     var body: some View {
         VStack(spacing: .quarck) {
@@ -28,9 +30,7 @@ private extension GroupView {
                 }
             }
             Spacer()
-            Button(Strings.Button.seeAll) {
-                print("See all tapped for group: \(data.title)")
-            }
+            Button(Strings.Button.seeAll, action: onSeeAllTap)
             .buttonStyle(.plain)
             .foregroundStyle(.tint)
             .font(.footnote)
@@ -57,7 +57,7 @@ private extension GroupView {
         let isSeparatorVisible = index % 3 != 0 && index != data.apps.count
         
         return AppItemView(data: app, isSeparatorVisible: isSeparatorVisible) {
-            print("App tapped with title: \(app.name)")
+            onAppTap(app)
         }
         .frame(width: rowWidth)
     }

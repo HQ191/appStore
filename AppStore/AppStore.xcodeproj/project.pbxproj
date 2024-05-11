@@ -21,6 +21,7 @@
 		5C553C9E2BEFE16900790EE4 /* BannerDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C553C9D2BEFE16900790EE4 /* BannerDto.swift */; };
 		5C553CA02BEFE1F400790EE4 /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C553C9F2BEFE1F400790EE4 /* BannerView.swift */; };
 		5C553CA32BEFE69200790EE4 /* HeadlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C553CA22BEFE69200790EE4 /* HeadlineView.swift */; };
+		5C553CA62BEFF63400790EE4 /* BannerItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C553CA52BEFF63400790EE4 /* BannerItemView.swift */; };
 		5C889ADF2BEBEE7A00E4A586 /* AppStoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C889ADE2BEBEE7A00E4A586 /* AppStoreApp.swift */; };
 		5C889AE12BEBEE7A00E4A586 /* AppsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C889AE02BEBEE7A00E4A586 /* AppsView.swift */; };
 		5C889AE32BEBEE7B00E4A586 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C889AE22BEBEE7B00E4A586 /* Images.xcassets */; };
@@ -63,6 +64,7 @@
 		5C553C9D2BEFE16900790EE4 /* BannerDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerDto.swift; sourceTree = "<group>"; };
 		5C553C9F2BEFE1F400790EE4 /* BannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
 		5C553CA22BEFE69200790EE4 /* HeadlineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlineView.swift; sourceTree = "<group>"; };
+		5C553CA52BEFF63400790EE4 /* BannerItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerItemView.swift; sourceTree = "<group>"; };
 		5C889ADB2BEBEE7A00E4A586 /* AppStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C889ADE2BEBEE7A00E4A586 /* AppStoreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreApp.swift; sourceTree = "<group>"; };
 		5C889AE02BEBEE7A00E4A586 /* AppsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsView.swift; sourceTree = "<group>"; };
@@ -129,8 +131,18 @@
 			isa = PBXGroup;
 			children = (
 				5C553CA22BEFE69200790EE4 /* HeadlineView.swift */,
+				5C889B1F2BEC2CCD00E4A586 /* HeadlineItemView.swift */,
 			);
 			path = Headline;
+			sourceTree = "<group>";
+		};
+		5C553CA42BEFF61F00790EE4 /* Banner */ = {
+			isa = PBXGroup;
+			children = (
+				5C553C9F2BEFE1F400790EE4 /* BannerView.swift */,
+				5C553CA52BEFF63400790EE4 /* BannerItemView.swift */,
+			);
+			path = Banner;
 			sourceTree = "<group>";
 		};
 		5C889AD22BEBEE7A00E4A586 = {
@@ -252,15 +264,14 @@
 		5C889B0D2BEBFFEF00E4A586 /* Apps */ = {
 			isa = PBXGroup;
 			children = (
+				5C553CA42BEFF61F00790EE4 /* Banner */,
 				5C553CA12BEFE68200790EE4 /* Headline */,
 				5CE28BA02BED811300A7E588 /* GroupView */,
 				5CE28B952BED683400A7E588 /* AppStateButton */,
 				5C889AE02BEBEE7A00E4A586 /* AppsView.swift */,
 				5C889B0B2BEBFE4400E4A586 /* CategoryView.swift */,
 				5C889B172BEC117E00E4A586 /* HeaderView.swift */,
-				5C889B1F2BEC2CCD00E4A586 /* HeadlineItemView.swift */,
 				5C553C802BEEA3B400790EE4 /* QuickLinksView.swift */,
-				5C553C9F2BEFE1F400790EE4 /* BannerView.swift */,
 			);
 			path = Apps;
 			sourceTree = "<group>";
@@ -395,6 +406,7 @@
 				5C889B0C2BEBFE4400E4A586 /* CategoryView.swift in Sources */,
 				5C553CA32BEFE69200790EE4 /* HeadlineView.swift in Sources */,
 				5C889B0A2BEBFD9800E4A586 /* CategoryDto.swift in Sources */,
+				5C553CA62BEFF63400790EE4 /* BannerItemView.swift in Sources */,
 				5C889B1E2BEC2C3F00E4A586 /* AppState.swift in Sources */,
 				5C889AEF2BEBEED300E4A586 /* AppsViewModel.swift in Sources */,
 				5C553C812BEEA3B400790EE4 /* QuickLinksView.swift in Sources */,
@@ -582,8 +594,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -616,8 +628,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -3,13 +3,17 @@ import SwiftUI
 struct HeadlineView: View {
     let headline: HeadLineDto
     let rowWidth: CGFloat
+    let onHeadlineTap: (HeadLineItemDto) -> Void
+    let onAppTap: (HeadLineItemDto) -> Void
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             LazyHStack {
                 ForEach(headline.items) { headline in
                     HeadlineItemView(headLine: headline, width: rowWidth) {
-                        print("Headline tapped with title: \(headline.headline)")
+                        onHeadlineTap(headline)
+                    } onAppTap: {
+                        onAppTap(headline)
                     }
                 }
             }
@@ -17,6 +21,5 @@ struct HeadlineView: View {
             .scrollTargetLayout()
         }
         .scrollTargetBehavior(.viewAligned)
-        .padding(.vertical, .xxs)
     }
 }
