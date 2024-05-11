@@ -28,13 +28,13 @@ private extension AppStateButton {
     func buildTextView(_ text: String) -> some View {
         ZStack(alignment: .bottom) {
             Text(text)
-                .font(.caption)
-                .fontWeight(.semibold)
+                .font(.footnote)
+                .fontWeight(.bold)
                 .foregroundColor(style.tint)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(style.backgroundColor)
-                .clipShape(RoundedRectangle(cornerRadius: .xxxs))
-                .frame(width: .xxl, height: .xl/2)
+                .clipShape(RoundedRectangle(cornerRadius: .infinity))
+                .frame(width: .xxl, height: .sm)
                 .padding(.bottom, .quarck)
             
             if appState == .notPurchased {

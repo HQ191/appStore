@@ -38,9 +38,9 @@ struct AppItemView: View {
     private func buildTextView() -> some View {
         VStack(alignment: .leading) {
             Text(data.name)
-                .font(.callout)
+                .font(.body)
             Text(data.description)
-                .font(.caption2)
+                .font(.footnote)
                 .foregroundStyle(.secondary)
         }
     }

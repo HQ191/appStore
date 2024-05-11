@@ -6,8 +6,8 @@ struct QuickLinksView: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text(Strings.title)
-                .font(.headline)
-                .fontWeight(.semibold)
+                .font(.title2)
+                .fontWeight(.bold)
                 .padding(.top, .xs)
             
             buttonQuickLinkView()
@@ -30,8 +30,7 @@ struct QuickLinksView: View {
         Button(link.title) {
             print("Link tapped with title: \(link.title)")
         }
-        .font(.headline)
-        .fontWeight(.light)
+        .font(.title3)
         .foregroundStyle(.tint)
         .buttonStyle(.plain)
         .padding(.vertical, .thin)
@@ -51,7 +50,6 @@ struct QuickLinksView: View {
             print("Button tapped with title: \(title)")
         } label: {
             Text(title)
-                .font(.caption)
                 .foregroundStyle(.tint)
                 .fontWeight(.medium)
                 .frame(maxWidth: .infinity)

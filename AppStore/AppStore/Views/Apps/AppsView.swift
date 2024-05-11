@@ -21,8 +21,8 @@ private extension AppsView {
         VStack(alignment: .center) {
             Spacer()
             Text(Strings.title)
-                .font(.subheadline)
-                .fontWeight(.semibold)
+                .font(.headline)
+                .fontWeight(.bold)
             Spacer()
             Divider().frame(maxWidth: .infinity)
         }
@@ -35,7 +35,7 @@ private extension AppsView {
         GeometryReader { geometry in
             let contentWidth = geometry.size.width - .xxs * 2
             List {
-                HeaderView()
+                HeaderView(profileImage: viewModel.profileImage)
                     .padding(.trailing, .xxs)
                     .listRowHiddenStyle()
                 

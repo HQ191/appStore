@@ -1,13 +1,15 @@
 import SwiftUI
 
 struct HeaderView: View {
+    let profileImage: Image
+    
     var body: some View {
         HStack {
             Text(Strings.title)
-                .font(.title)
+                .font(.largeTitle)
                 .fontWeight(.bold)
             Spacer()
-            Image(systemName: "person.circle")
+            profileImage
                 .resizable()
                 .frame(width: .sm, height: .sm)
                 .clipShape(Circle())

@@ -8,8 +8,8 @@ struct BannerView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: .quarck) {
             Text(data.title)
-                .font(.title3)
-                .fontWeight(.semibold)
+                .font(.title2)
+                .fontWeight(.bold)
             buildBannerList()
         }
     }

@@ -6,10 +6,10 @@ struct BannerItemView: View {
     let onTap: () -> Void
     
     var body: some View {
-        VStack(alignment: .leading, spacing: .quarck) {
+        VStack(alignment: .leading, spacing: .nano) {
             buildImageView()
             Text(data.title)
-                .font(.caption)
+                .font(.footnote)
         }
         .frame(maxWidth: .infinity)
         .gesture(

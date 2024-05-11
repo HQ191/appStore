@@ -21,11 +21,11 @@ private extension GroupView {
         HStack {
             VStack(alignment: .leading) {
                 Text(data.title)
-                    .font(.title3)
-                    .fontWeight(.semibold)
+                    .font(.title2)
+                    .fontWeight(.bold)
                 if let subtitle = data.subtitle {
                     Text(subtitle)
-                        .font(.footnote)
+                        .font(.callout)
                         .foregroundStyle(.secondary)
                 }
             }
@@ -33,7 +33,6 @@ private extension GroupView {
             Button(Strings.Button.seeAll, action: onSeeAllTap)
             .buttonStyle(.plain)
             .foregroundStyle(.tint)
-            .font(.footnote)
         }
         .padding(.trailing, .xxs)
     }

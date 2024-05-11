@@ -70,10 +70,11 @@ private extension HeadlineItemView {
                     .circularBorder()
                 VStack(alignment: .leading) {
                     Text(headLine.app.name)
-                        .font(.caption)
+                        .font(.callout)
                         .foregroundStyle(.black)
+                        .fontWeight(.semibold)
                     Text(headLine.app.description)
-                        .font(.caption2)
+                        .font(.footnote)
                         .foregroundStyle(.black.opacity(0.5))
                 }
                 Spacer()
