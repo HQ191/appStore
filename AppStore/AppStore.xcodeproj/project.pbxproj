@@ -16,6 +16,7 @@
 		5C553C902BEED3DA00790EE4 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C553C8F2BEED3DA00790EE4 /* TodayView.swift */; };
 		5C553C922BEED3E500790EE4 /* ArcadeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C553C912BEED3E500790EE4 /* ArcadeView.swift */; };
 		5C553C942BEED40D00790EE4 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C553C932BEED40D00790EE4 /* SearchView.swift */; };
+		5C553C992BEFBB9A00790EE4 /* View+Offest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C553C982BEFBB9A00790EE4 /* View+Offest.swift */; };
 		5C889ADF2BEBEE7A00E4A586 /* AppStoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C889ADE2BEBEE7A00E4A586 /* AppStoreApp.swift */; };
 		5C889AE12BEBEE7A00E4A586 /* AppsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C889AE02BEBEE7A00E4A586 /* AppsView.swift */; };
 		5C889AE32BEBEE7B00E4A586 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C889AE22BEBEE7B00E4A586 /* Images.xcassets */; };
@@ -53,6 +54,7 @@
 		5C553C8F2BEED3DA00790EE4 /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
 		5C553C912BEED3E500790EE4 /* ArcadeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcadeView.swift; sourceTree = "<group>"; };
 		5C553C932BEED40D00790EE4 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		5C553C982BEFBB9A00790EE4 /* View+Offest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Offest.swift"; sourceTree = "<group>"; };
 		5C889ADB2BEBEE7A00E4A586 /* AppStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C889ADE2BEBEE7A00E4A586 /* AppStoreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreApp.swift; sourceTree = "<group>"; };
 		5C889AE02BEBEE7A00E4A586 /* AppsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsView.swift; sourceTree = "<group>"; };
@@ -241,6 +243,7 @@
 				5C889B122BEC018300E4A586 /* CGFloat+Spacing.swift */,
 				5C889B192BEC18C800E4A586 /* View+ListRowStyle.swift */,
 				5C889B212BEC456900E4A586 /* View+Extensions.swift */,
+				5C553C982BEFBB9A00790EE4 /* View+Offest.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 				5C553C872BEEA49D00790EE4 /* QuickLinkModel.swift in Sources */,
 				5C553C902BEED3DA00790EE4 /* TodayView.swift in Sources */,
 				5CE28B9D2BED7F3400A7E588 /* AppItemDto.swift in Sources */,
+				5C553C992BEFBB9A00790EE4 /* View+Offest.swift in Sources */,
 				5C889B1C2BEC2B5700E4A586 /* HeadLineDto.swift in Sources */,
 				5CE28B922BED5FB000A7E588 /* AppStateButton.swift in Sources */,
 				5C889B022BEBF4A500E4A586 /* Strings.swift in Sources */,

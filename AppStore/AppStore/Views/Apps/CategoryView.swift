@@ -11,6 +11,7 @@ struct CategoryView: View {
                 }
             }
             .padding(.leading, .quarck)
+            .padding(.vertical, .quarck)
             .padding(.trailing, .xxxs)
         }
     }

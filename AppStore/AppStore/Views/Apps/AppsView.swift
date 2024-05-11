@@ -2,15 +2,14 @@ import SwiftUI
 
 struct AppsView: View {
     @ObservedObject var viewModel: AppsViewModel
-    @State private var isNavigationBarHidden = false
-    @State private var currentIndex = 0
+    @State private var isTitleBarVisible = false
 
     var body: some View {
-        NavigationStack {
+        ZStack(alignment: .top) {
             buildContentView()
-                .navigationTitle(Strings.title)
-                .navigationBarTitleDisplayMode(.inline)
-                .navigationBarHidden(isNavigationBarHidden)
+            if isTitleBarVisible {
+                buildTitleBar()
+            }
         }
     }
     
@@ -18,6 +17,20 @@ struct AppsView: View {
 }
 
 private extension AppsView {
+    func buildTitleBar() -> some View {
+        VStack(alignment: .center) {
+            Spacer()
+            Text(Strings.title)
+                .font(.subheadline)
+                .fontWeight(.semibold)
+            Spacer()
+            Divider().frame(maxWidth: .infinity)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .md)
+        .background(.regularMaterial)
+    }
+    
+    
     func buildContentView() -> some View {
         GeometryReader { geometry in
             let contentWidth = geometry.size.width - .xxs * 2
@@ -25,8 +38,12 @@ private extension AppsView {
                 HeaderView()
                     .padding(.trailing, .xxs)
                     .listRowHiddenStyle()
+                
                 CategoryView(categories: viewModel.categories)
                     .listRowHiddenStyle()
+                    .onOffsetChange(geometry) { offset in
+                        setTitleBarHidden(offset.y < 50)
+                    }
                 
                 buildHealineView(width: contentWidth)
                     .listRowHiddenStyle()
@@ -39,9 +56,14 @@ private extension AppsView {
                     .padding(.trailing, .xxs)
             }
             .scrollIndicators(.hidden)
-            .padding(.top, -.lg)
             .padding(.leading, .xxs)
             .listStyle(.plain)
+        }
+    }
+    
+    func setTitleBarHidden(_ hidden: Bool) {
+        withAnimation(.easeIn(duration: 0.2)) {
+            isTitleBarVisible = hidden
         }
     }
     
