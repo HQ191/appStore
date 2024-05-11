@@ -31,12 +31,12 @@ private extension CategoryView {
                 Text(category.name)
                     .multilineTextAlignment(.leading)
                     .font(.caption)
-                    .foregroundColor(.black.opacity(0.7))
+                    .foregroundStyle(.primaryText)
             }
         }
         .padding(.vertical, .quarck)
         .padding(.horizontal, .nano)
-        .background(Color.white)
+        .background(.onBackground)
         .cornerRadius(.nano)
         .shadow(color: Color.gray.opacity(0.3), radius: .quarck)
     }

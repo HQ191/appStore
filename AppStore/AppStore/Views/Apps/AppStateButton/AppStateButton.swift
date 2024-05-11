@@ -18,6 +18,7 @@ struct AppStateButton: View {
                 buildIconView(icon)
             }
         }
+        .buttonStyle(.plain)
     }
     
     private typealias Strings = L10n.AppStateButton
@@ -33,7 +34,7 @@ private extension AppStateButton {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(style.backgroundColor)
                 .clipShape(RoundedRectangle(cornerRadius: .xxxs))
-                .frame(width: .xxl, height: .xs)
+                .frame(width: .xxl, height: .xl/2)
                 .padding(.bottom, .quarck)
             
             if appState == .notPurchased {
@@ -58,7 +59,7 @@ private extension AppStateButton {
     func buildSubTextView() -> some View {
         Text(Strings.inappPurchase)
             .font(.system(size: .mini/2))
-            .foregroundColor(.black.opacity(0.7))
+            .foregroundStyle(style.subtitleColor)
     }
 }
 

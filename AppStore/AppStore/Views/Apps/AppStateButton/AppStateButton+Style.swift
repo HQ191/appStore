@@ -7,7 +7,7 @@ extension AppStateButton {
         
         var backgroundColor: Color {
             switch self {
-            case .solid: return .gray.opacity(0.3)
+            case .solid: return .gray.opacity(0.2)
             case .opaque: return .black.opacity(0.5)
             }
         }
@@ -16,6 +16,13 @@ extension AppStateButton {
             switch self {
             case .solid: return .accentColor
             case .opaque: return .white
+            }
+        }
+        
+        var subtitleColor: Color {
+            switch self {
+            case .solid: return .secondary
+            case .opaque: return .black.opacity(0.5)
             }
         }
     }

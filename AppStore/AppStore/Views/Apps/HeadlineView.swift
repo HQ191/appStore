@@ -70,9 +70,10 @@ private extension HeadlineView {
                 VStack(alignment: .leading) {
                     Text(headLine.app.name)
                         .font(.caption)
+                        .foregroundStyle(.black)
                     Text(headLine.app.description)
                         .font(.caption2)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(.black.opacity(0.5))
                 }
                 Spacer()
                 AppStateButton(appState: headLine.app.state, style: .opaque) {

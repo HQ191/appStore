@@ -19,22 +19,29 @@ struct GroupView: View {
 private extension GroupView {
     func buildTitleView() -> some View {
         HStack {
-            Text(data.title)
-                .font(.title3)
-                .fontWeight(.bold)
+            VStack(alignment: .leading) {
+                Text(data.title)
+                    .font(.title3)
+                    .fontWeight(.bold)
+                if let subtitle = data.subtitle {
+                    Text(subtitle)
+                        .font(.footnote)
+                        .foregroundStyle(.secondary)
+                }
+            }
             Spacer()
             Button(Strings.Button.seeAll) {
                 print("See all tapped for group: \(data.title)")
             }
             .buttonStyle(.plain)
             .foregroundStyle(.tint)
-            .font(.caption)
+            .font(.footnote)
         }
         .padding(.trailing, .xxs)
     }
     
     func buildAppListView() -> some View {
-        let rows = Array(repeating: GridItem(.fixed(65)), count: 3)
+        let rows = Array(repeating: GridItem(.fixed(.xxl)), count: 3)
         
         return ScrollView(.horizontal, showsIndicators: false) {
             LazyHGrid(rows: rows) {
