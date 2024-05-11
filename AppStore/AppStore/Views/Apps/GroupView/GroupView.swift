@@ -9,8 +9,6 @@ struct GroupView: View {
             buildTitleView()
             buildAppListView()
         }
-        .padding(.top, .nano)
-        .padding(.bottom, .xxs)
     }
     
     private typealias Strings = L10n.Apps
@@ -22,7 +20,7 @@ private extension GroupView {
             VStack(alignment: .leading) {
                 Text(data.title)
                     .font(.title3)
-                    .fontWeight(.bold)
+                    .fontWeight(.semibold)
                 if let subtitle = data.subtitle {
                     Text(subtitle)
                         .font(.footnote)

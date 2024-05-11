@@ -7,25 +7,26 @@ struct AppGroupDto: Identifiable {
     let apps: [AppItemDto]
 }
 
-extension [AppGroupDto] {
-    static let mock: [AppGroupDto] = [
-        .init(
+extension AppGroupDto {
+    static let mock1 = AppGroupDto(
             title: "This Week's Favorites",
             apps: .mock
-        ),
-        .init(
+        )
+    
+    static let mock2 = AppGroupDto(
             title: "New Apps We Love",
             subtitle: "Get them while they're hot",
             apps: .mock
-        ),
-        .init(
+        )
+    
+    static let mock3 = AppGroupDto(
             title: "Top Games",
             apps: .mock
-        ),
-        .init(
+        )
+    
+    static let mock4 = AppGroupDto(
             title: "Top Apps",
             subtitle: "Selected by App Store editors",
             apps: .mock
         )
-    ]
 }

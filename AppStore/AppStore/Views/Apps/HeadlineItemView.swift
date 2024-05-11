@@ -1,7 +1,7 @@
 import SwiftUI
 
-struct HeadlineView: View {
-    let headLine: HeadLineDto
+struct HeadlineItemView: View {
+    let headLine: HeadLineItemDto
     let width: CGFloat
     let onTap: () -> Void
     
@@ -22,7 +22,7 @@ struct HeadlineView: View {
     }
 }
 
-private extension HeadlineView {
+private extension HeadlineItemView {
     func buildTitleView() -> some View {
         VStack(alignment: .leading, spacing: 0) {
             Text(headLine.type)
@@ -82,6 +82,6 @@ private extension HeadlineView {
             }
             .padding(.xxxs)
         }
-        .background(Color.white.opacity(0.5).blur(radius: 20))
+        .background(Color.white.opacity(0.5).blur(radius: 10))
     }
 }

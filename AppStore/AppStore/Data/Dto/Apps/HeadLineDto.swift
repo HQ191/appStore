@@ -1,6 +1,14 @@
 import SwiftUI
 
-struct HeadLineDto: Identifiable {
+struct HeadLineDto{
+    let items: [HeadLineItemDto]
+}
+
+extension HeadLineDto {
+    static let mock: HeadLineDto = .init(items: .mock)
+}
+
+struct HeadLineItemDto: Identifiable {
     let id: String
     let type: String
     let headline: String
@@ -8,9 +16,9 @@ struct HeadLineDto: Identifiable {
     let app: AppItemDto
 }
 
-extension [HeadLineDto] {
-    static let mock: [HeadLineDto] = [
-        HeadLineDto(
+extension [HeadLineItemDto] {
+    static let mock: [HeadLineItemDto] = [
+        HeadLineItemDto(
             id: "1",
             type: "GET FIT",
             headline: "Eat healthy, live healthy",
@@ -22,7 +30,7 @@ extension [HeadLineDto] {
                 state: .downloaded
             )
         ),
-        HeadLineDto(
+        HeadLineItemDto(
             id: "2",
             type: "FOR KIDS",
             headline: "It's egg defence time",
@@ -34,7 +42,7 @@ extension [HeadLineDto] {
                 state: .notPurchased
             )
         ),
-        HeadLineDto(
+        HeadLineItemDto(
             id: "3",
             type: "EDITOR'S CHOICE",
             headline: "Eat your fill",
@@ -44,18 +52,6 @@ extension [HeadLineDto] {
                 description: "Have stunning meals",
                 icon: Asset.Images.dineHubIcon.swiftUIImage,
                 state: .downloaded
-            )
-        ),
-        HeadLineDto(
-            id: "4",
-            type: "FEATURED",
-            headline: "Learn from experts",
-            image: Asset.Images.galaxyGuide.swiftUIImage,
-            app: .init(
-                name: "Galaxy Guide",
-                description: "Know your galaxy",
-                icon: Asset.Images.galaxyGuideIcon.swiftUIImage,
-                state: .purchased
             )
         )
     ]

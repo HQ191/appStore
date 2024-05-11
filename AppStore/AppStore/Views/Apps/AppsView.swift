@@ -45,11 +45,11 @@ private extension AppsView {
                         setTitleBarHidden(offset.y < 50)
                     }
                 
-                buildHealineView(width: contentWidth)
-                    .listRowHiddenStyle()
-                
-                buildAppGroupView(width: contentWidth)
-                    .listRowHiddenStyle()
+                ForEach(0..<viewModel.dataStream.count, id: \.self) { index in
+                    let data = viewModel.dataStream[index]
+                    buildStreamView(data: data, contentWidth: contentWidth)
+                        .listRowHiddenStyle()
+                }
                 
                 QuickLinksView(links: viewModel.quickLinks)
                     .listRowHiddenStyle()
@@ -67,28 +67,32 @@ private extension AppsView {
         }
     }
     
-    func buildHealineView(width: CGFloat) -> some View {
-        ScrollView(.horizontal, showsIndicators: false) {
-            LazyHStack {
-                ForEach(viewModel.headlines) { headline in
-                    HeadlineView(headLine: headline, width: width) {
-                        print("Headline tapped with title: \(headline.headline)")
-                    }
-                }
-            }
-            .padding(.trailing, .xxs)
-            .scrollTargetLayout()
+    @ViewBuilder func buildStreamView(data: Any, contentWidth: CGFloat) -> some View {
+        if let headline = data as? HeadLineDto {
+            HeadlineView(headline: headline, rowWidth: contentWidth)
         }
-        .scrollTargetBehavior(.viewAligned)
-        .padding(.vertical, .xxs)
+        else if let appGroup = data as? AppGroupDto {
+            buildAppGroupView(appGroup: appGroup, width: contentWidth)
+        }
+        else if let banner = data as? BannerDto {
+            buildBannerView(banner: banner, width: contentWidth)
+        }
     }
     
-    func buildAppGroupView(width: CGFloat) -> some View {
-        VStack(spacing: .zero) {
-            ForEach(viewModel.appGroups) { appGroup in
-                Divider().padding(.trailing, .xxs)
-                GroupView(data: appGroup, rowWidth: width)
-            }
+    func buildAppGroupView(appGroup: AppGroupDto, width: CGFloat) -> some View {
+        VStack(spacing: .nano) {
+            Divider().padding(.trailing, .xxs)
+            GroupView(data: appGroup, rowWidth: width)
+                .padding(.bottom, .xxs)
+        }
+        .padding(.top, .nano)
+    }
+    
+    func buildBannerView(banner: BannerDto, width: CGFloat) -> some View {
+        VStack(spacing: .nano) {
+            Divider().padding(.trailing, .xxs)
+            BannerView(data: banner, width: width)
+                .padding(.bottom, .xxxs)
         }
         .padding(.top, .nano)
     }
