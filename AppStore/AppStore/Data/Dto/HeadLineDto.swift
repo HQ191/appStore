@@ -12,49 +12,49 @@ extension [HeadLineDto] {
     static let mock: [HeadLineDto] = [
         HeadLineDto(
             id: "1",
-            type: "Your type here",
-            headline: "Your headline here",
-            image: Image(systemName: "pencil.and.ellipsis.rectangle"),
+            type: "GET FIT",
+            headline: "Eat healthy, live healthy",
+            image: Asset.Images.nutrientAssociate.swiftUIImage,
             app: .init(
-                name: "Your App Name Here",
-                description: "Your app description here",
-                icon: Image(systemName: "pencil.and.ellipsis.rectangle"),
+                name: "Nutrient Associate",
+                description: "Know your food",
+                icon: Asset.Images.nutrientAssociateIcon.swiftUIImage,
                 state: .downloaded
             )
         ),
         HeadLineDto(
             id: "2",
-            type: "Your type here",
-            headline: "Your headline here",
-            image: Image(systemName: "tv.music.note.fill"),
+            type: "FOR KIDS",
+            headline: "It's egg defence time",
+            image: Asset.Images.shockShell.swiftUIImage,
             app: .init(
-                name: "Your App Name Here",
-                description: "Your app description here",
-                icon: Image(systemName: "tv.music.note.fill"),
-                state: .purchased
+                name: "Shock Shell",
+                description: "Egg defence",
+                icon: Asset.Images.shockShellIcon.swiftUIImage,
+                state: .notPurchased
             )
         ),
         HeadLineDto(
             id: "3",
-            type: "Your type here",
-            headline: "Your headline here",
-            image: Image(systemName: "book.fill"),
+            type: "EDITOR'S CHOICE",
+            headline: "Eat your fill",
+            image: Asset.Images.dineHub.swiftUIImage,
             app: .init(
-                name: "Your App Name Here",
-                description: "Your app description here",
-                icon: Image(systemName: "book.fill"),
-                state: .purchased
+                name: "Dine hub",
+                description: "Have stunning meals",
+                icon: Asset.Images.dineHubIcon.swiftUIImage,
+                state: .downloaded
             )
         ),
         HeadLineDto(
             id: "4",
-            type: "Your type here",
-            headline: "Your headline here",
-            image: Image(systemName: "location.circle.fill"),
+            type: "FEATURED",
+            headline: "Learn from experts",
+            image: Asset.Images.galaxyGuide.swiftUIImage,
             app: .init(
-                name: "Your App Name Here",
-                description: "Your app description here",
-                icon: Image(systemName: "location.circle.fill"),
+                name: "Galaxy Guide",
+                description: "Know your galaxy",
+                icon: Asset.Images.galaxyGuideIcon.swiftUIImage,
                 state: .purchased
             )
         )

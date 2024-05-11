@@ -9,7 +9,7 @@ struct AppItemView: View {
         HStack {
             data.icon
                 .resizable()
-                .aspectRatio(contentMode: .fit)
+                .aspectRatio(contentMode: .fill)
                 .frame(width: .xl, height: .xl)
                 .clipShape(RoundedRectangle(cornerRadius: .nano))
                 .circularBorder(radius: .nano)

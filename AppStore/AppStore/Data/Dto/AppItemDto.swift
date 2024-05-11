@@ -11,52 +11,52 @@ struct AppItemDto: Identifiable {
 extension [AppItemDto] {
     static let mock: [AppItemDto] = [
         AppItemDto(
-            name: "Your App Name Here",
-            description: "Your app description here",
-            icon: Image(systemName: "pencil.and.ellipsis.rectangle"),
-            state: .notPurchased
-        ),
-        AppItemDto(
-            name: "Your App Name Here",
-            description: "Your app description here",
-            icon: Image(systemName: "tv.music.note.fill"),
+            name: "Galaxy Guide",
+            description: "Know your galaxy",
+            icon: Asset.Images.galaxyGuideIcon.swiftUIImage,
             state: .purchased
         ),
         AppItemDto(
-            name: "Your App Name Here",
-            description: "Your app description here",
-            icon: Image(systemName: "book.fill"),
-            state: .updateAvailable
+            name: "Dine hub",
+            description: "Have stunning meals",
+            icon: Asset.Images.dineHubIcon.swiftUIImage,
+            state: .downloaded
         ),
         AppItemDto(
-            name: "Your App Name Here",
-            description: "Your app description here",
-            icon: Image(systemName: "location.circle.fill"),
+            name: "Shock Shell",
+            description: "Egg defence",
+            icon: Asset.Images.shockShellIcon.swiftUIImage,
             state: .notPurchased
         ),
         AppItemDto(
-            name: "Your App Name Here",
-            description: "Your app description here",
-            icon: Image(systemName: "pencil.and.ellipsis.rectangle"),
+            name: "Nutrient Associate",
+            description: "Know your food",
+            icon: Asset.Images.nutrientAssociateIcon.swiftUIImage,
+            state: .downloaded
+        ),
+        AppItemDto(
+            name: "Galaxy Guide",
+            description: "Know your galaxy",
+            icon: Asset.Images.galaxyGuideIcon.swiftUIImage,
+            state: .purchased
+        ),
+        AppItemDto(
+            name: "Dine hub",
+            description: "Have stunning meals",
+            icon: Asset.Images.dineHubIcon.swiftUIImage,
+            state: .downloaded
+        ),
+        AppItemDto(
+            name: "Shock Shell",
+            description: "Egg defence",
+            icon: Asset.Images.shockShellIcon.swiftUIImage,
             state: .notPurchased
         ),
         AppItemDto(
-            name: "Your App Name Here",
-            description: "Your app description here",
-            icon: Image(systemName: "tv.music.note.fill"),
-            state: .notPurchased
-        ),
-        AppItemDto(
-            name: "Your App Name Here",
-            description: "Your app description here",
-            icon: Image(systemName: "book.fill"),
-            state: .notPurchased
-        ),
-        AppItemDto(
-            name: "Your App Name Here",
-            description: "Your app description here",
-            icon: Image(systemName: "location.circle.fill"),
-            state: .notPurchased
+            name: "Nutrient Associate",
+            description: "Know your food",
+            icon: Asset.Images.nutrientAssociateIcon.swiftUIImage,
+            state: .downloaded
         )
     ]
 }

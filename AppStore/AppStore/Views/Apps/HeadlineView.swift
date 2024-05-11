@@ -46,12 +46,13 @@ private extension HeadlineView {
         ZStack(alignment: .bottom) {
             headLine.image
                 .resizable()
-                .aspectRatio(contentMode: .fit)
+                .aspectRatio(contentMode: .fill)
                 .frame(
                     width: width,
                     height: width * 0.6
                 )
-                .circularBorder(radius: .quarck)
+                .clipShape(RoundedRectangle(cornerRadius: .nano))
+                .circularBorder()
             
             buildImageOverlay()
         }
@@ -62,7 +63,7 @@ private extension HeadlineView {
             HStack {
                 headLine.app.icon
                     .resizable()
-                    .aspectRatio(contentMode: .fit)
+                    .aspectRatio(contentMode: .fill)
                     .frame(width: .md, height: .md)
                     .clipShape(RoundedRectangle(cornerRadius: .nano))
                     .circularBorder()
@@ -80,6 +81,6 @@ private extension HeadlineView {
             }
             .padding(.xxxs)
         }
-        .background(Color.white.opacity(0.3).blur(radius: 5))
+        .background(Color.white.opacity(0.5).blur(radius: 20))
     }
 }
