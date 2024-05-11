@@ -22,9 +22,10 @@ extension View {
         color: Color = Color.gray.opacity(0.3),
         width: CGFloat = .hairLine
     ) -> some View {
-        self.overlay(
-            RoundedRectangle(cornerRadius: radius)
-                .stroke(color, lineWidth: width)
-        )
+        self.clipShape(RoundedRectangle(cornerRadius: radius))
+            .overlay(
+                RoundedRectangle(cornerRadius: radius)
+                    .stroke(color, lineWidth: width)
+            )
     }
 }

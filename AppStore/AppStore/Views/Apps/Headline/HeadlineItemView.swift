@@ -52,7 +52,6 @@ private extension HeadlineItemView {
                     width: width,
                     height: width * 0.6
                 )
-                .clipShape(RoundedRectangle(cornerRadius: .nano))
                 .circularBorder()
             
             buildImageOverlay()
@@ -66,7 +65,6 @@ private extension HeadlineItemView {
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: .md, height: .md)
-                    .clipShape(RoundedRectangle(cornerRadius: .nano))
                     .circularBorder()
                 VStack(alignment: .leading) {
                     Text(headLine.app.name)

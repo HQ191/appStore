@@ -27,7 +27,6 @@ struct BannerItemView: View {
                 width: width,
                 height: width * 0.6
             )
-            .clipShape(RoundedRectangle(cornerRadius: .nano))
             .circularBorder()
         
     }

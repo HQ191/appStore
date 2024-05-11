@@ -10,9 +10,8 @@ struct AppItemView: View {
             data.icon
                 .resizable()
                 .aspectRatio(contentMode: .fill)
-                .frame(width: .xl, height: .xl)
-                .clipShape(RoundedRectangle(cornerRadius: .nano))
-                .circularBorder(radius: .nano)
+                .frame(width: .xxl, height: .xxl)
+                .circularBorder(radius: .xxxs)
             HStack {
                 buildTextView()
                 Spacer()

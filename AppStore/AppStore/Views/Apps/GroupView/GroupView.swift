@@ -38,7 +38,7 @@ private extension GroupView {
     }
     
     func buildAppListView() -> some View {
-        let rows = Array(repeating: GridItem(.fixed(.xxl)), count: 3)
+        let rows = Array(repeating: GridItem(.fixed(.xxxl)), count: 3)
         
         return ScrollView(.horizontal, showsIndicators: false) {
             LazyHGrid(rows: rows) {
